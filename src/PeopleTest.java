@@ -10,7 +10,7 @@ public class PeopleTest {
     public static void main(String[] args) {
         List<Person> people = null;
 
-        try(BufferedReader reader = new BufferedReader(new FileReader("dataset.csv"))) {
+        try(BufferedReader reader = new BufferedReader(new FileReader("myFile0.csv"))) {
             people = reader.lines()
                     .skip(1)
                     .map(str -> str.split(","))                                 //Теперь у нас Stream<String[]>
