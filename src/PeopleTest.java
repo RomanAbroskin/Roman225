@@ -10,11 +10,11 @@ public class PeopleTest {
     public static void main(String[] args) {
         List<Person> people = null;
 
-        try(BufferedReader reader = new BufferedReader(new FileReader("myFile0.csv"))) {
+        try(BufferedReader reader = new BufferedReader(new FileReader("myFile0(1).csv"))) {
             people = reader.lines()
                     .skip(1)
                     .map(str -> str.split(","))                                 //Теперь у нас Stream<String[]>
-                    .map(data -> new Person(data[0], Integer.parseInt(data[1])))     //Теперь у нас Stream<Person>
+                    .map(data -> new Person(data[0],data[1],data[2],Integer.parseInt(data[3])))    //Теперь у нас Stream<Person>
                     .collect(Collectors.toList());
         }
         catch(IOException ex) {

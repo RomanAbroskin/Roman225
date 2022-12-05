@@ -6,16 +6,14 @@ public class Person {
     private String imail;
 
 
-    public Person(String name, int age) {
+    public Person(String name, String Lastname, String imail, int age) {
         this.name = name;
-        this.age = age;
-        this.Lastname = Lastname;
         this.imail = imail;
+        this.Lastname = Lastname;
+        this.age = age;
     }
 
-    public Person(String lastname, String imail) {
 
-    }
 
     public String getName() {
         return name;
